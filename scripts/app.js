@@ -8,18 +8,20 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-let db = firebase.firestore()
-const TURMA = "turmaA"
+  let db = firebase.firestore()
+// const TURMA = "turmaA"
 
-db.collection(TURMA).onSnapshot((snapshot) => {
-    snapshot.forEach((doc) => {
-        let amigos = doc.data()
-        console.log(amigos)
-    })
-})
+// db.collection(TURMA).onSnapshot((snapshot) => {
+//     snapshot.forEach((doc) => {
+//         let amigos = doc.data()
+//         console.log(amigos)
+//     })
+// })
 // db.collection(TURMA).doc("alunoNovo").set({
 //     nome: `Sara`, 
 //     notas: { nata1: 10, nota2: 10}
 // }).then(() => {
 //     console.log(`Amigo inserido com sucesso.`)
 // })
+
+console.log(firebase.auth())
